@@ -1,5 +1,6 @@
-./node_modules
-./.vscode
-./amplify
+
+/.vscode
+/node_modules
+/amplify
 .env
 test.js
