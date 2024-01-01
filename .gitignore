@@ -1,0 +1,5 @@
+./node_modules
+./.vscode
+./amplify
+.env
+test.js
