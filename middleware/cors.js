@@ -1,4 +1,4 @@
-const whitelist = ['http://localhost:8080', 'http://localhost:3000', 'https://server-app-bcec.onrender.com']
+const whitelist = ['http://localhost:8080', 'http://localhost:3000', 'https://develop.d2zxv9sn1yne9h.amplifyapp.com']
 
 const corsOptions = {
     origin: function (origin, callback) {
