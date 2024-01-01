@@ -6,7 +6,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const corsOptions = require('./middleware/cors');
 
-const { authRouter, googleRouter, questionRouter, commentRouter, memberRouter, cloudRouter } = require('./routes')
+const { authRouter, googleRouter, questionRouter, commentRouter, memberRouter, cloudRouter } = require('./routes');
 const app = express();
 
 app.use(cors(corsOptions));

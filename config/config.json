@@ -10,14 +10,14 @@
     "username": "root",
     "password": "qwer1234",
     "database": "tlcn",
-    "host": "127.0.0.1",
+    "host": "database-tlcn.c58ygckqeqli.ap-southeast-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "qwer1234",
     "database": "tlcn",
-    "host": "127.0.0.1",
+    "host": "database-tlcn.c58ygckqeqli.ap-southeast-2.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
