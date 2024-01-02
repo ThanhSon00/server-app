@@ -13,11 +13,14 @@ const googleRegister = async (req, res) => {
     }
 
     const { name, email: googleId, picture } = jwt.decode(credential);
-    console.log(picture);
+    const members = await memberService.getMembers({ googleId });
+    const hasSigned = members[0];
+    if (hasSigned) {
+        return res.status(StatusCodes.OK).json(members[0]);
+    }
+
     const member = await memberService.createMember({ name, googleId, avatar: picture, accountId: 1 });
-    const accessToken = jwt.sign({ id: 1, email: googleId }, process.env.ACCESS_SECRET);
-    
-    res.cookie('accessToken', accessToken);
+
     return res.status(StatusCodes.OK).json(member);
 }
 
