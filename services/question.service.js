@@ -16,7 +16,7 @@ const getQuestions = (conditions) => {
     const { page, size, search, filter, ...restOfConditions } = conditions;
     const where = [ restOfConditions ], order = [['createdAt', 'DESC']], having = [], attributes = { include: [] };
 
-    attributes.include.push([Sequelize.literal('(SELECT COUNT(*) FROM comments WHERE comments.questionId = `Question`.`id`)'), 'commentsCount']);
+    attributes.include.push([Sequelize.literal('(SELECT COUNT(*) FROM `Comments` WHERE `Comments`.questionId = `Question`.`id`)'), 'commentsCount']);
 
     if (search) {
         having.push({ searchScore: { [notEqual]: 0 }});
