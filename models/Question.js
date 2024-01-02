@@ -1,8 +1,6 @@
 const sequelize = require('../database/connect');
 const { DataTypes, Model, Op } = require('sequelize');
 const { ne: notEqual } = Op;
-const Member = require('./Member');
-const Comment = require('./Comment');
 
 class Question extends Model { }
 

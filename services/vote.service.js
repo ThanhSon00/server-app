@@ -1,7 +1,7 @@
 const { Vote } = require('../models');
 
 const getVotes = (conditions) => {
-    return Vote.findAll({ where: conditions});
+    return Vote.findAll({ where: [conditions]});
 }
 
 const createVote = (data) => {
@@ -9,7 +9,7 @@ const createVote = (data) => {
 }
 
 const deleteVote = (conditions) => {
-    return Vote.destroy({ where: conditions, individualHooks: true });
+    return Vote.destroy({ where: [conditions], individualHooks: true });
 }
 
 const updateVote = async (conditions, attrs) => {

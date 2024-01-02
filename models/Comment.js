@@ -49,6 +49,11 @@ Comment.init({
 
 
 Comment.beforeFind((options) => {
+    if (options.where instanceof Object) {
+        const object = options.where;
+        options.where = [];
+        options.where.push(object);
+      }
     options.where ||= [];
     options.where.push({ id: { [notEqual]: 1 }});
   })
